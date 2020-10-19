@@ -1,6 +1,5 @@
 # Windows default autosave extension
 *.asv
-*.autosave
 
 # OSX / *nix default autosave extension
 *.m~
@@ -18,6 +17,7 @@ helpsearch*/
 # Simulink code generation folders
 slprj/
 sccprj/
+*_ert_rtw/
 
 # Matlab code generation folders
 codegen/
@@ -30,3 +30,9 @@ codegen/
 
 # Octave session info
 octave-workspace
+
+# Compiled Binaries
+*.bin
+*.elf
+*.hex
+
