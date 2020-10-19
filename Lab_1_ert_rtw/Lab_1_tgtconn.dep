@@ -1,0 +1,11 @@
+Lab_1_tgtconn.o: \
+ D:/3K04/3K04-pacemaker-firmware/Lab_1_ert_rtw/Lab_1_tgtconn.c \
+ D:/3K04/3K04-pacemaker-firmware/Lab_1_ert_rtw/rtwtypes.h \
+ C:/Program\ Files/MATLAB/R2020a/extern/include/RTIOStreamTgtAppSvc/RTIOStreamTgtAppSvcCIntrf.h \
+ C:/Program\ Files/MATLAB/R2020a/extern/include/RTIOStreamTgtAppSvc/RTIOStreamTgtAppSvc_dll.hpp
+
+D:/3K04/3K04-pacemaker-firmware/Lab_1_ert_rtw/rtwtypes.h:
+
+C:/Program\ Files/MATLAB/R2020a/extern/include/RTIOStreamTgtAppSvc/RTIOStreamTgtAppSvcCIntrf.h:
+
+C:/Program\ Files/MATLAB/R2020a/extern/include/RTIOStreamTgtAppSvc/RTIOStreamTgtAppSvc_dll.hpp:
