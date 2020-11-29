@@ -2,14 +2,14 @@ import serial, struct
 
 def sendData():
     path = serial.Serial('COM3', 115200)
-    mode = 4
+    mode = 5
     Lower_Rate_Limit = 60
-    Upper_Rate_Limit = 0x02
-    Maximum_Sensor_Rate = 120
+    Upper_Rate_Limit = 120
+    Maximum_Sensor_Rate = 0
     Fixed_AV_Delay = 150
     Atrial_Amplitude = 4
     Atrial_Pulse_Width = 0.4
-    Ventricular_Amplitude = 3
+    Ventricular_Amplitude = 3.5
     Ventricular_Pulse_Width =  0.4
     Atrial_Sensitivity =  75
     VRP = 320
@@ -28,9 +28,9 @@ def sendData():
             + struct.pack("B", Upper_Rate_Limit)\
             + struct.pack("H", Maximum_Sensor_Rate)\
             + struct.pack("H", Fixed_AV_Delay)\
-            + struct.pack("B", Atrial_Amplitude)\
+            + struct.pack("d", Atrial_Amplitude)\
             + struct.pack("d", Atrial_Pulse_Width)\
-            + struct.pack("B", Ventricular_Amplitude)\
+            + struct.pack("d", Ventricular_Amplitude)\
             + struct.pack("d", Ventricular_Pulse_Width)\
             + struct.pack("d", Atrial_Sensitivity)\
             + struct.pack("H", VRP)\
@@ -43,7 +43,9 @@ def sendData():
             + struct.pack("B", Response_Factor)\
             + struct.pack("B", Recovery_Time)\
 
+    print(toSend)
+    print(len(toSend))
     path.write(toSend)
-    print(struct.pack("d", Atrial_Pulse_Width))
+    # print(struct.pack("d", Atrial_Pulse_Width))
 
 sendData()
